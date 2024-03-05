@@ -12,10 +12,10 @@
     command: sudo systemctl start docker
 
   - name: stop docker
-    command: sudo docker stop $(sudo docker ps -aq)
+    command: 'sudo docker stop $(sudo docker ps -aq)'
     
   - name: remove docker service
-    command: sudo docker rm $(sudo docker ps -aq)
+    command: 'sudo docker rm $(sudo docker ps -aq)'
     
   - name: deploy insureme application
     command: sudo docker run -itd -p 8081:8081 --name Prema-insure-me-test premasr351/capstone-project:1.0
